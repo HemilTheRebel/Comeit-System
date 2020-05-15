@@ -1,0 +1,60 @@
+
+.Header {
+	color :#fff;
+	text-align: center;
+	font-size:40px;
+	margin-top: 0px;
+	margin-bottom : 0px;
+	color: Yellow;
+	font-family: Futura;
+}
+body {
+    background-image:linear-gradient(rgb(0,0,0,0.6),rgb(0,0,0,0.6)), url(/static/Images/Image1.jpg);
+	height: 90vh;
+	background-size: cover;
+	background-position: center;
+}
+ul {
+	float: right;
+	text-decoration: none;
+	margin-top: 0px;
+	margin-right: 25px;
+	margin-top: 0px;
+}
+ul li {
+	display: inline-block;
+	size : 60px;
+}
+
+
+ ul li a {
+	color: white;
+	margin-right: 5px;
+	text-decoration: none;
+	border: 3px transparent ;
+	border-color: white;
+	padding: 05px 20px;
+
+}
+.Links a:hover {
+background-color: White;
+color : Green;
+transition: 0.5s ease ;
+}
+.Links .active {
+	background-color: White;
+	color : BLue;
+}
+.college{
+float: right;
+padding: 1px;
+color: white;
+
+}
+
+.text {
+    color : yellow;
+    margin-left: 200px;
+    max-width : 1000px;
+
+}
