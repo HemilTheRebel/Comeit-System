@@ -7,7 +7,7 @@ from Forms import Register, Volunteer, LoginForm
 
 connection = pymysql.connect('localhost',
                              'root',
-                             'N!kketanGT16',
+                             'Nikketan',
                              'COMEIT',
                              # Fetch Results as Python Dictionary, Easier to access specific columns
                              cursorclass=pymysql.cursors.DictCursor)
