@@ -5,9 +5,10 @@ import pymysql.cursors
 from flask_login import LoginManager, login_user, login_required, current_user, logout_user, UserMixin
 from Forms import Register, Volunteer, LoginForm
 
+# Host name, username, password, database
 connection = pymysql.connect('localhost',
-                             'root',
-                             'Nikketan',
+                             'comeit',
+                             'comeit',
                              'COMEIT',
                              # Fetch Results as Python Dictionary, Easier to access specific columns
                              cursorclass=pymysql.cursors.DictCursor)
@@ -19,11 +20,13 @@ app = Flask(__name__)
 Open terminal, type python or py and then type the following code.
     import uuid
     uuid.uuid4()
-Paste the String Generated.
+Paste the String Generated in secret.key file.
 """
 
 # Secret Key For Configurations
-app.config['SECRET_KEY'] = 'c4ceadd4-4e99-475d-9a27-f23b7f219f52'
+with open('secret.key') as file:
+    app.config['SECRET_KEY'] = file.read()
+
 bcrypt = Bcrypt(app)
 csrf = CSRFProtect(app)
 login_manager = LoginManager(app)
